@@ -13,6 +13,8 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#DDB12E"
         app:backgroundTint="#BFAA6C"
+        app:itemIconTint="@drawable/bottom_nav_selector"
+        app:itemTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
