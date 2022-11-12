@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Public/Documents/Android/BottomNavView/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.1" />
+        <entry key="..\:/Users/Public/Documents/Android/BottomNavView/app/src/main/res/drawable/ic_baseline_content_copy_24.xml" value="0.172" />
+        <entry key="..\:/Users/Public/Documents/Android/BottomNavView/app/src/main/res/drawable/ic_baseline_playlist_add_24.xml" value="0.172" />
+        <entry key="..\:/Users/Public/Documents/Android/BottomNavView/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.172" />
+        <entry key="..\:/Users/Public/Documents/Android/BottomNavView/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
         <entry key="..\:/Users/Public/Documents/Android/BottomNavView/app/src/main/res/layout/activity_main.xml" value="0.20878623188405798" />
         <entry key="..\:/Users/Public/Documents/Android/BottomNavView/app/src/main/res/menu/bottom_menu.xml" value="0.27447916666666666" />
       </map>

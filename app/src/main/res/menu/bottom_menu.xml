@@ -2,25 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/search"
-        android:title="search"
+        android:id="@+id/stackOverFlow"
+        android:icon="@drawable/ic_baseline_manage_search_24"
+        android:orderInCategory="1"
+        android:title="StackOverFlow" />
+
+    <item
+        android:id="@+id/youTube"
+        android:icon="@drawable/ic_baseline_play_circle_filled_24"
+        android:orderInCategory="2"
+        android:title="YouTube" />
+
+    <item
+        android:id="@+id/google"
         android:icon="@drawable/ic_baseline_search_24"
         android:orderInCategory="1"
-        />
-
-    <item
-        android:id="@+id/copy"
-        android:title="copy"
-        android:icon="@drawable/ic_baseline_content_copy_24"
-        android:orderInCategory="2"
-        />
-
-    <item
-        android:id="@+id/add"
-        android:title="add"
-        android:icon="@drawable/ic_baseline_playlist_add_24"
-        android:orderInCategory="1"
-        />
+        android:title="Google" />
 
 
 </menu>
