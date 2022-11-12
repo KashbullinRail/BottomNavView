@@ -3,35 +3,41 @@ package com.example.bottomnavview
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.example.bottomnavview.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private val wvWeb: WebView by lazy { findViewById(R.id.wvWeb) }
+    private val bNV: BottomNavigationView by lazy { findViewById(R.id.BNV) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        webViewStart(GOOGLE_URL)
+       webViewStart(GOOGLE_URL)
 
-        binding.BNV.selectedItemId = R.id.google
-        binding.BNV.setOnNavigationItemReselectedListener {
-            when(it.itemId){
-                R.id.google -> {webViewStart(GOOGLE_URL)}
-                R.id.youTube -> {webViewStart(YouTube_URL)}
-                R.id.stackOverFlow -> {webViewStart(StackOverFlow_URL)}
+        bNV.setOnNavigationItemReselectedListener {
+            when (it.itemId) {
+                R.id.google -> {
+                    webViewStart(GOOGLE_URL)
+                }
+                R.id.youTube -> {
+                    webViewStart(YouTube_URL)
+                }
+                R.id.stackOverFlow -> {
+                    webViewStart(StackOverFlow_URL)
+                }
             }
         }
     }
 
     @SuppressLint("SetJavaScriptEnabled")
-    fun webViewStart(url: String){
-        binding.wvWeb.webViewClient = WebViewClient()
+    fun webViewStart(url: String) {
+        wvWeb.webViewClient = WebViewClient()
 
-            binding.wvWeb.apply {
+        wvWeb.apply {
             loadUrl(url)
             settings.javaScriptEnabled = true
             settings.loadWithOverviewMode = true
@@ -39,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if(binding.wvWeb.canGoBack()) binding.wvWeb.goBack() else super.onBackPressed()
+        if (wvWeb.canGoBack()) wvWeb.goBack() else super.onBackPressed()
     }
 
 }
